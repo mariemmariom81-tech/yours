@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="script.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+  </head>
+<body class="bg-background-light text-slate-900 font-display min-h-screen flex flex-col">
+
+<input class="hidden" id="nav-toggle" type="checkbox"/>
+<header class="flex items-center justify-between px-8 pt-14 pb-4 z-50">
+<div class="flex items-center gap-2">
+<img src="images/mynewlogo.jpg"
+     alt="Yours"
+     class="h-20 w-auto object-contain">
+<span class="font-bold text-xl tracking-[0.2em] text-slate-900"></span>
+</div>
+<label class="cursor-pointer p-2 rounded-full hover:bg-primary/5 transition-colors" for="nav-toggle">
+<span class="material-symbols-outlined text-3xl text-primary">menu</span>
+</label>
+</header>
+<main class="flex-1 px-8 flex flex-col items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined absolute text-primary animate-heart-float text-2xl" style="top: 15%; left: 15%; animation-delay: 0s;">favorite</span>
+<span class="material-symbols-outlined absolute text-primary animate-heart-float text-xl" style="top: 25%; right: 20%; animation-delay: 1.5s;">favorite</span>
+<span class="material-symbols-outlined absolute text-primary animate-heart-float text-lg" style="bottom: 35%; left: 20%; animation-delay: 0.8s;">favorite</span>
+<span class="material-symbols-outlined absolute text-primary animate-heart-float text-3xl" style="bottom: 45%; right: 15%; animation-delay: 2.2s;">favorite</span>
+<div class="text-center z-10 mb-10">
+<h1 class="text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
+                   Welcome to Your Digital <br/><span class="text-primary italic font-light">Surprise</span>
+</h1>
+</div>
+<div class="relative w-full aspect-square flex items-center justify-center unboxing-perspective">
+<div class="absolute w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
+<button class="relative group cursor-pointer focus:outline-none animate-float">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-16 gift-gradient rounded-t-xl z-30 shadow-xl border-b border-black/10 origin-bottom transform -rotate-[15deg] animate-lid-hover transition-transform duration-500 group-hover:-translate-y-6 group-hover:-rotate-[25deg] flex items-center justify-center overflow-hidden">
+<div class="absolute left-1/2 -translate-x-1/2 w-6 h-full bg-white/10"></div>
+<span class="material-symbols-outlined text-white/30 text-3xl">unfold_more</span>
+</div>
+<a href="login.html" class="block">
+    <span class="font-elegant text-primary text-xl font-bold italic leading-tight group-hover:scale-110 transition-transform duration-500">
+        click <br/> here
+    </span>
+</a>
+<div class="relative w-44 h-44 gift-gradient rounded-b-2xl shadow-2xl z-10 overflow-hidden border-t border-white/20">
+<div class="absolute left-1/2 -translate-x-1/2 w-10 h-full bg-white/20"></div>
+<div class="absolute top-1/2 -translate-y-1/2 w-full h-10 bg-white/20"></div>
+</div>
+</button>
+</div>
+</main>
+
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-200 rounded-full z-40"></div>
+<div class="hidden absolute inset-0 z-[60] menu-overlay flex-col items-center justify-center p-8 animate-in fade-in duration-300" id="overlay-menu">
+<label class="absolute top-14 right-8 p-2 cursor-pointer" for="nav-toggle">
+<span class="material-symbols-outlined text-4xl text-primary">close</span>
+</label>
+<div class="flex flex-col items-center gap-10">
+<div class="flex flex-col items-center gap-2 mb-4">
+<img src="images/mynewlogo.jpg"
+     alt="Yours"
+     class="h-20 w-auto object-contain">
+<span class="font-bold text-2xl tracking-[0.3em] text-slate-900">Yours</span>
+</div>
+<nav class="flex flex-col items-center gap-8">
+<a class="text-3xl font-light tracking-widest text-slate-900 hover:text-primary transition-colors" href="#">HOME</a>
+<a class="text-3xl font-light tracking-widest text-slate-900 hover:text-primary transition-colors" href="story.html">OUR JOURNEY</a>
+<a class="text-3xl font-light tracking-widest text-slate-900 hover:text-primary transition-colors" href="login.html">LOGIN</a>
+<a class="text-3xl font-light tracking-widest text-slate-900 hover:text-primary transition-colors" href="contact.html">CONTACT</a>
+</nav>
+<div class="mt-12 flex gap-6 text-primary/40">
+<span class="material-symbols-outlined">favorite</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+</div>
+
+</div>
+
+<script id="tailwind-config">
+tailwind.config = {
+
+    /* تفعيل الوضع الليلي باستخدام class */
+    darkMode: "class",
+
+    theme: {
+        extend: {
+
+            /* الألوان المخصصة */
+            colors: {
+                "primary": "#a6322c",
+                "background-light": "#ffffff",
+            },
+
+            /* الخطوط المخصصة */
+            fontFamily: {
+                "display": ["Plus Jakarta Sans"],
+                "elegant": ["Playfair Display", "serif"]
+            },
+
+            /* التحكم في انحناء الحواف */
+            borderRadius: {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+
+            /* تعريف الأنيميشن */
+            animation: {
+                'float': 'float 6s ease-in-out infinite',
+                'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+                'heart-float': 'heart-float 4s ease-in-out infinite',
+                'lid-hover': 'lid-hover 2s ease-in-out infinite',
+            },
+
+            /* تعريف الحركات (keyframes) */
+            keyframes: {
+
+                /* حركة الطفو */
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-15px)' },
+                },
+
+                /* تأثير التوهج */
+                'pulse-glow': {
+                    '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                    '50%': { opacity: '0.8', transform: 'scale(1.15)' },
+                },
+
+                /* حركة القلوب */
+                'heart-float': {
+                    '0%, 100%': { transform: 'translateY(0) scale(1)', opacity: '0.3' },
+                    '50%': { transform: 'translateY(-25px) scale(1.3)', opacity: '0.6' },
+                },
+
+                /* حركة غطاء الهدية */
+                'lid-hover': {
+                    '0%, 100%': { transform: 'translateY(0) rotate(-4deg)' },
+                    '50%': { transform: 'translateY(-10px) rotate(-6deg)' },
+                }
+            }
+        },
+    },
+}
+</script>
+
+</body>
+</html>

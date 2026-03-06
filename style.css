@@ -1,0 +1,41 @@
+/* ================= أدوات Tailwind المخصصة ================= */
+@layer utilities {
+
+    /* إنشاء منظور ثلاثي الأبعاد لحركة فتح الهدية */
+    .unboxing-perspective {
+        perspective: 1200px;
+    }
+
+    /* تنسيق القائمة المنبثقة مع تأثير ضباب (Blur) */
+    .menu-overlay {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    /* تدرج لوني لصندوق الهدية */
+    .gift-gradient {
+        background: linear-gradient(135deg, #a6322c 0%, #852823 100%);
+    }
+    
+}
+
+/* إظهار القائمة عند تفعيل الـ checkbox */
+#nav-toggle:checked ~ #overlay-menu {
+    display: flex;
+}
+
+/* ================= تنسيقات عامة للصفحة ================= */
+body {
+    /* منع مشاكل الارتفاع في الشاشات الصغيرة */
+    min-height: 100dvh;
+
+    /* إزالة تأثير التحديد الأزرق عند اللمس في الموبايل */
+    -webkit-tap-highlight-color: transparent;
+}
+   
+    
+
+/* بديل للمتصفحات القديمة لضبط أقل ارتفاع للصفحة */
+body {
+    min-height: max(884px, 100dvh);
+}
